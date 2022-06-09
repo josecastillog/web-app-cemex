@@ -127,7 +127,7 @@ app.get('/', (req, res) => {
         res.render('profile', {
             login: true,
             name: req.session.name,
-            user: req.session.user
+            user: req.session.user,
         })
     } else {
         res.render('index')
@@ -139,7 +139,8 @@ app.get('/profile', (req, res) => {
         res.render('profile', {
             login: true,
             name: req.session.name,
-            user: req.session.user
+            user: req.session.user,
+            id: req.session.id
         })
     } else {
         res.render('index')
